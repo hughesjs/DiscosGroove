@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscosGroove.Main", "DiscosGroove.Main\DiscosGroove.Main.csproj", "{6E0F85E9-E118-4174-898A-6F5618E7A569}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscosGroove.Core", "DiscosGroove.Core\DiscosGroove.Core.csproj", "{84A54F71-2E6A-40BC-9B3F-DF8E7E959DB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscosGroove.Main.Tests", "DiscosGroove.Main.Tests\DiscosGroove.Main.Tests.csproj", "{B50C0352-7FE9-4597-817A-BDE86ABE6A11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscosGroove.Core.Tests", "DiscosGroove.Core.Tests\DiscosGroove.Core.Tests.csproj", "{0FDF309D-39C1-4B0F-912A-1BB0B46D7B80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E0F85E9-E118-4174-898A-6F5618E7A569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E0F85E9-E118-4174-898A-6F5618E7A569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E0F85E9-E118-4174-898A-6F5618E7A569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E0F85E9-E118-4174-898A-6F5618E7A569}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84A54F71-2E6A-40BC-9B3F-DF8E7E959DB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84A54F71-2E6A-40BC-9B3F-DF8E7E959DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84A54F71-2E6A-40BC-9B3F-DF8E7E959DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84A54F71-2E6A-40BC-9B3F-DF8E7E959DB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B50C0352-7FE9-4597-817A-BDE86ABE6A11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B50C0352-7FE9-4597-817A-BDE86ABE6A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B50C0352-7FE9-4597-817A-BDE86ABE6A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B50C0352-7FE9-4597-817A-BDE86ABE6A11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FDF309D-39C1-4B0F-912A-1BB0B46D7B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FDF309D-39C1-4B0F-912A-1BB0B46D7B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FDF309D-39C1-4B0F-912A-1BB0B46D7B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FDF309D-39C1-4B0F-912A-1BB0B46D7B80}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

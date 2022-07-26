@@ -1,0 +1,32 @@
+name: .NET Continuous Integration
+
+on:
+  pull_request:
+    branches: [ master ]
+  push:
+    branches: [ master ]
+
+jobs:
+  test-core:
+    name: Test Core Library
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+    - name: Run tests
+      run: dotnet test --logger GitHubActions ./DiscosGroove/DiscosGroove.Core/DiscosGroove.Core.csproj
+    
+  test-main:
+    name: Test Main Application
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+    - name: Run tests
+      run: dotnet test --logger GitHubActions ./DiscosGroove/DiscosGroove.Main/DiscosGroove.Main.csproj
