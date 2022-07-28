@@ -23,7 +23,7 @@
              Load Objects
         </Button>
         <TextBox Name="TxtApiKey"
-                 Text="{Binding DiscosObjects.Count}"
+                 Text="{Binding DiscosObjects.Value.Count}"
                  Grid.Row="2" Grid.Column="0"
                  TabIndex="1"
                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="20"/>

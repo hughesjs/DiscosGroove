@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Reactive;
 using System.Threading.Tasks;
 using DiscosGroove.Core.Services;
+using DiscosGroove.Main.Wrappers;
 using DiscosWebSdk.Models.ResponseModels.DiscosObjects;
 using ReactiveUI;
 
@@ -15,13 +13,7 @@ namespace DiscosGroove.Main.ViewModels
         private readonly IDiscosService _discosService;
         public ReactiveCommand<Unit, Unit> LoadObjectsCommand { get; }
 
-        private IReadOnlyCollection<DiscosObject> _discosObjects = new ReadOnlyCollection<DiscosObject>(new List<DiscosObject>());
-
-        public IReadOnlyCollection<DiscosObject> DiscosObjects
-        {
-            get => _discosObjects;
-            private set => this.RaiseAndSetIfChanged(ref _discosObjects, value);
-        }
+        public ObservableSetWrapper<IReadOnlyCollection<DiscosObject>> DiscosObjects { get; } = new();
 
         public MainWindowViewModel(IDiscosService discosService)
         {
@@ -31,7 +23,7 @@ namespace DiscosGroove.Main.ViewModels
 
         private async Task LoadObjects()
         {
-            DiscosObjects = await _discosService.GetDiscosObjects();
+            DiscosObjects.Value = await _discosService.GetDiscosObjects();
         }
     }
 } 
