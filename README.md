@@ -12,6 +12,8 @@ Database and Information System Characterising Objects in Space - Graphing Relat
 
 This application interfaces with the DISCOSweb API, making data analysis and visualisation easy.
 
+***⚠⚠⚠ THIS IS VERY MUCH STILL IN EARLY DEVELOPMENT ⚠⚠⚠***
+
 # Note for Linux and MacOS Users
 
 Until such time as ScottPlot 5 is released, you'll need to have the Mono version of libgdi installed.
