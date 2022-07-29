@@ -1,8 +1,7 @@
 ﻿using ReactiveUI;
 
-namespace DiscosGroove.Main.ViewModels
+namespace DiscosGroove.Main.ViewModels;
+
+public class ViewModelBase : ReactiveObject
 {
-    public class ViewModelBase : ReactiveObject
-    {
-    }
 }
