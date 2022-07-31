@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Avalonia.Controls;
 using DiscosGroove.Main.ViewModels;
+using DiscosWebSdk.DependencyInjection;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DiscosGroove.Main.DependencyInjection;
@@ -17,10 +19,10 @@ public static class ServiceCollectionExtensions
 		{
 			services.AddTransient(window);
 		}
-		
+
 		return services;
 	}
-	
+
 	public static IServiceCollection AddViewModels(this IServiceCollection services)
 	{
 		IEnumerable<Type> windows = typeof(App).Assembly.GetTypes().Where(t => t.IsAssignableTo(typeof(ViewModelBase)));
@@ -29,6 +31,13 @@ public static class ServiceCollectionExtensions
 		{
 			services.AddTransient(window);
 		}
+
+		return services;
+	}
+
+	public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration config)
+	{
+		services.AddDiscosServices(config);
 
 		return services;
 	}
