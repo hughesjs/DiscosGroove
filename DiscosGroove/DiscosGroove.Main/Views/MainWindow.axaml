@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:avalonia="clr-namespace:ScottPlot.Avalonia;assembly=ScottPlot.Avalonia"
-        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="300"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="400"
         x:Class="DiscosGroove.Main.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="DiscosGroove.Main">
@@ -13,20 +13,21 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <Grid ColumnDefinitions="20* 20* 40*" RowDefinitions="* * * * *" ShowGridLines="True" Margin="20">
-        <Button Name="BtnLoadObjects"
-                Grid.Row="1" Grid.Column="0"
-                TabIndex="0"
-                HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="20"
-                HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                Command="{Binding LoadObjectsCommand}">
-             Load Objects
-        </Button>
-        <TextBox Name="TxtApiKey"
-                 Text="{Binding DiscosObjects.Value.Count}"
-                 Grid.Row="2" Grid.Column="0"
-                 TabIndex="1"
-                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="20"/>
+    <Grid ColumnDefinitions="20* 80*" ShowGridLines="True">
+        <StackPanel>
+            <Button Margin="5" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center">Load from DISCOS</Button>
+            <Button Margin="5" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center">Load from Cache</Button>
+            <Button Margin="5" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center">Plot Object Histo</Button>
+            <Grid ColumnDefinitions="* *" RowDefinitions="* * *">
+                <Label Grid.Row="0" Grid.Column="0" Margin="5 0 5 0">Status:</Label>
+                <Label Grid.Row="0" Grid.Column="1" Margin="5 0 5 0">Idle</Label>
+                <Label Grid.Row="1" Grid.Column="0" Margin="5 0 5 0">Total:</Label>
+                <Label Grid.Row="1" Grid.Column="1" Margin="5 0 5 0">0</Label>
+                <Label Grid.Row="2" Grid.Column="0" Margin="5 0 5 0">Loaded:</Label>
+                <Label Grid.Row="2" Grid.Column="1" Margin="5 0 5 0">0</Label>
+            </Grid>
+        </StackPanel>
+        <avalonia:AvaPlot Grid.Column="1" Name="DiscosHistogram" Margin="5"/>
     </Grid>
 
 </Window>
